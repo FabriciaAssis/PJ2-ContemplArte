@@ -1,0 +1,12 @@
+.bg-primary {
+    background-color: rgb(101, 8, 177) !important;
+    font-style:italic;
+    font-family: 'Times New Roman', Times, serif;   
+}
+
+.navbar-brand{
+}
+
+/* .navbar-light .navbar-nav .nav-link{
+    color: pink;
+} */
