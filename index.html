@@ -4,25 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ContemplArte-index</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>ContemplArte|index</title>
 </head>
 <body>
     <header>
         <div class="container main-header">
-            <a href="/index.html">
-                <h2>Contemplarte</h2>
+            <a href="http://localhost/source/PJ2-G12/">
+                <h2>ContemplArte</h2>
             </a>
             <nav id="main-nav">
                 <ul>
-                    <li><a href="/index.html"></a></li>
-                    <li><a href="/index.html"></a>Contato</li>
-                    <li><a href="/index.html" class="active">Login</a></li>
-                    <!-- <li><a href="https://www.instagram.com/">Instagram</a></li>
-                    <li><a href="https://twitter.com/">Twitter</a></li>
-                    <li><a href="https://pt-br.facebook.com/">Facebook</a></li> -->
+                    <li><a href="http://localhost/source/PJ2-G12/">Sobre</a></li>
+                    <li><a href="http://localhost/source/PJ2-G12/"></a>Contato</li>
                 </ul>
             </nav>
+            <main>
+                    <header id="content-header" class="container flex-sb">
+                        <div class="bradcrump"></div>
+                        <button onclick="showModal('#modal-login')">Login</button>
+                    </header>
+                </main>
         </div>
     </header>
+    <footer>
+        <p>© Copyrigh 2022 ContemplArte | Todos direitos Reservados</p>
+        <p>Fabrícia Assis</p>
+    </footer>
+    <div class="modal" id="modal-cadastrar" onclick="hideModal('#modal-cadastrar', event)">
+        <div class="modal-body">
+            <h1>Entre na sua conta</h1>
+            <form onsubmit="insert(event)"> <!-- method="POST" action="backend/insert.php" -->
+                <input type="text" name="email" placeholder="Email">
+                <input type="password" name="senha">
+                <a>Esquceu a senha?</a>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </div>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -10,3 +10,140 @@
     --grey-800:#d3d3d3;
     --grey-1000:#fff;
 }
+
+html, body *{
+    margin: 0;
+    padding: 0;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+body{
+    background: var(--grey-1000);
+    color: var(--grey-0);
+}
+a{
+    color: var(--primary);
+    text-decoration: none;
+}
+
+button{
+    background: var(--secundary);
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: var(--grey-1000);
+    cursor: pointer;
+}
+
+button:hover{
+    background: var(--secundary-dark);
+}
+
+.flex-sb{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header{
+    background: var(--gray-400);
+    height: 50px;
+}
+
+.container{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.main-header{
+  display: flex;  
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+#main-nav{
+    align-items: center;
+    display: flex;
+    width: 300px;
+    height: 40px;
+}
+
+#main-nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#main-nav ul li{
+        list-style-type: none;
+        margin: 0 0 0 20px;
+
+}
+
+#main-nav ul li a{
+    color: var(--grey-800);
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+#main-nav ul li a:hover{
+    color: var(--grey-1000);
+}
+
+#content-header{
+    margin-top: 20px;
+}
+ody > footer{
+    background: var(--grey-400);
+    color: var(--grey-600);
+    text-align: center;
+    /* height: 400px; */
+    padding: 100px 50px;
+}
+
+.modal{
+    background: #0c0c0c85;
+    backdrop-filter: blur(5px);
+    position: absolute;
+    display: /*flex*/ none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .modal-body{
+    width: 600px;
+    border-radius: 15px;
+    background: var(--grey-1000);
+    color: var(--grey-0);
+    padding: 30px 20px;
+}
+
+.modal .modal-body form{
+    display: flex;
+    flex-direction: column;
+}
+
+.modal .modal-body form label{
+    margin: 15px 0 0 0;
+}
+
+.modal .modal-body form input[type=text]{
+    height: 30px;
+    padding: 3px 5px;
+    border-radius: 10px;
+}
+
+.modal .modal-body form input[type=password]{
+    height: 30px;
+    padding: 3px 5px;
+    border-radius: 10px;
+}
+
+.modal .modal-body form button{
+    margin: 15px 0 0 0;
+}
