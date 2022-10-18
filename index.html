@@ -5,43 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>ContemplArte|index</title>
+    <title>ContemplArte-index</title>
 </head>
 <body>
     <header>
         <div class="container main-header">
             <a href="http://localhost/source/PJ2-G12/">
-                <h2>ContemplArte</h2>
+                <h2>Contemplarte</h2>
             </a>
             <nav id="main-nav">
                 <ul>
+                    <li><a href="http://localhost/source/PJ2-G12/">Contato</a></li>
                     <li><a href="http://localhost/source/PJ2-G12/">Sobre</a></li>
-                    <li><a href="http://localhost/source/PJ2-G12/"></a>Contato</li>
+                   
                 </ul>
-            </nav>
-            <main>
+ 
+                <main>
                     <header id="content-header" class="container flex-sb">
-                        <div class="bradcrump"></div>
-                        <button onclick="showModal('#modal-login')">Login</button>
+                       <div class="bradcrump"></div>
+                            <button onclick="showModal('#modal-login')">Login</button>
                     </header>
                 </main>
+            </nav>
         </div>
     </header>
-    <footer>
-        <p>© Copyrigh 2022 ContemplArte | Todos direitos Reservados</p>
-        <p>Fabrícia Assis</p>
+    <footer> <!--Aql coisinha q fica lá em baixo do site-->
+        <p>© Copyrigh 2022 Contemplarte | Todos direitos Reservados</p>
     </footer>
-    <div class="modal" id="modal-cadastrar" onclick="hideModal('#modal-cadastrar', event)">
+    <div class="modal" id="modal-login" onclick="hideModal('#modal-login', event)">
         <div class="modal-body">
             <h1>Entre na sua conta</h1>
             <form onsubmit="insert(event)"> <!-- method="POST" action="backend/insert.php" -->
                 <input type="text" name="email" placeholder="Email">
-                <input type="password" name="senha">
-                <a>Esquceu a senha?</a>
+                <br>
+                <input type="password" name="senha" placeholder="Senha">
+                <a href="#">Esqueceu a senha?</a>
                 <button type="submit">Entrar</button>
             </form>
+            <div>
+               
+            </div>
         </div>
     </div>
-    <script src="assets/js/main.js"></script>
+     <script src="assets/js/main.js"></script> <!--Faz a 'animação' do botão de login-->
 </body>
 </html>
+
