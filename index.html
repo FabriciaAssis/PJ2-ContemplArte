@@ -4,31 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>ContemplArte-index</title>
 </head>
 <body>
-    <header>
-        <div class="container main-header">
-            <a href="http://localhost/source/PJ2-G12/">
-                <h2>Contemplarte</h2>
-            </a>
-            <nav id="main-nav">
-                <ul>
-                    <li><a href="http://localhost/source/PJ2-G12/">Contato</a></li>
-                    <li><a href="http://localhost/source/PJ2-G12/">Sobre</a></li>
-                   
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary" >
+
+            <!-- elemento destaque q funciona como se fosse um logo q manda para pag inicial -->
+            <a href="atv_projeto.html" class="navbar-brand">Casa das Artes</a>
+
+            <!-- criou o batão para quando a tela for pequena -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsite">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+                        <!-- itens do navbar -->
+            <div class="navbar-collapse collapse" id="navbarsite">
+                <!-- <ul class="navbar-nav">
+                    <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Perfil</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Serviços</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Testemunhos</a></li>
+                </ul> -->
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toglle" data-toggle="dropdown" id="navDrop">
+                            Contatos
+                        </a>
+                        <div class="dropdown-menu w-25">
+                            <a href="#" class="dropdown-item">Facebook</a>
+                            <a href="#" class="dropdown-item">Twitter</a>
+                            <a href="#" class="dropdown-item">Instagram</a>
+                        </div>
+                    </li>
                 </ul>
- 
-                <main>
-                    <header id="content-header" class="container flex-sb">
-                       <div class="bradcrump"></div>
-                            <button onclick="showModal('#modal-login')">Login</button>
-                    </header>
-                </main>
-            </nav>
-        </div>
-    </header>
+
+                <!-- Formulário de pesquisa -->
+                <from class="form-inline">
+                    <input type="search" class="form-control ml-lg-5" placeholder="Buscar...">
+                    <button class="bnt bnt-dark" type="submit">Ok</button>
+                </from>
+            </div>
+        </nav> <!-- nav class="navbar"> -->
     <footer> <!--Aql coisinha q fica lá em baixo do site-->
         <p>© Copyrigh 2022 Contemplarte | Todos direitos Reservados</p>
     </footer>
