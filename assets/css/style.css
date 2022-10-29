@@ -1,110 +1,69 @@
-:root{
-    --primary:  #4F147D/*rgb(138, 8, 138)*/; 
-    --primary-dark: #772daf; 
-    --secundary: #BA007D;
-    --secundary-dark: #770050;
-    --grey-0: #000;
-    --grey-200: #0c0c0c;
-    --grey-400: /*#2e2e2e*/ #141414;
-    --grey-600:#818181;
-    --grey-800:#d3d3d3;
-    --grey-1000:#fff;
+.html, body *{
+        font-family: 'Times New Roman', Times, serif;   
+
+}
+.bg-primary {
+    background-color: rgb(25, 9, 39) !important;
+    font-style:italic;
 }
 
-html, body *{
-    margin: 0;
-    padding: 0;
-    font-family:Georgia, 'Times New Roman', Times, serif
+.navbar-light .navbar-brand{
+    color:rgb(235, 1, 145); 
+    font-family: fantasy;
+    font-size: small;
 }
 
-body{
-    background: var(--grey-1000);
-    color: var(--grey-0);
-}
-a{
-    color: var(--primary);
-    text-decoration: none;
+.navbar-light .navbar-brand:hover{
+    color: rgb(255, 82, 189);
 }
 
-button{
-    background: var(--secundary);
-    padding: 10px 15px;
-    border-radius: 10px;
-    color: var(--grey-1000);
-    cursor: pointer;
+.navbar-light .navbar-nav .nav-link {
+    color:rgb(235, 1, 145) ; 
 }
 
-button:hover{
-    background: var(--secundary-dark);
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
+    color: rgb(235, 1, 145);
 }
 
-.flex-sb{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.navbar-nav .dropdown-menu {
+    position: static;
+    float: none;
+    background-color: rgb(60, 28, 88);
 }
 
-header{
-    background: var(--gray-400);
-    height: 50px;
-}
-
-.container{
+.dropdown-item {
+    display: block;
     width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: rgb(235, 1, 145);
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
 }
 
-.main-header{
-  display: flex;  
-  justify-content: space-between;
-  align-items: center;
-  height: 50px;
+.navbar-light .navbar-nav .nav-link:hover {
+    color:rgb(255, 82, 189); 
 }
 
-#main-nav{
-    align-items: center;
-    display: flex;
-    width: 300px;
-    height: 40px;
-}
 
-#main-nav ul{
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-#main-nav ul li{
-        list-style-type: none;
-        margin: 0 0 0 20px;
-
-}
-
-#main-nav ul li a{
-    color: var(--grey-800);
-    font-size: 1.2rem;
-    padding: 10px;
-}
-
-#main-nav ul li a:hover{
-    color: var(--grey-1000);
-}
-
-#content-header{
-    margin-top: 20px;
-}
-ody > footer{
-    background: var(--grey-400);
-    color: var(--grey-600);
+body > footer{
     text-align: center;
     /* height: 400px; */
     padding: 100px 50px;
 }
 
+#bntCad{
+    background-color: rgb(235, 1, 145);
+    border-radius: 12px;
+    padding: 5px;
+}
+
 .modal{
-    background: #0c0c0c85;
-    backdrop-filter: blur(5px);
+    /* background: #0c0c0c85; */
+    /* backdrop-filter: blur(5px); */
     position: absolute;
     display: /*flex*/ none;
     top: 0;
@@ -117,10 +76,11 @@ ody > footer{
 
 .modal .modal-body{
     width: 600px;
+    margin: 155px;
     border-radius: 15px;
-    background: var(--grey-1000);
-    color: var(--grey-0);
-    padding: 30px 20px;
+    background: rgb(60, 28, 88);
+    color: rgb(235, 1, 145);
+    padding: 30px 70px;
 }
 
 .modal .modal-body form{
@@ -144,6 +104,11 @@ ody > footer{
     border-radius: 10px;
 }
 
+#escSenha{
+    
+}
+
 .modal .modal-body form button{
-    margin: 15px 0 0 0;
+    background-color: rgb(235, 1, 145);
+    border-radius: 12px;
 }
