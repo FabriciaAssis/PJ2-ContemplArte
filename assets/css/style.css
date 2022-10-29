@@ -104,11 +104,149 @@ body > footer{
     border-radius: 10px;
 }
 
-#escSenha{
-    
-}
-
 .modal .modal-body form button{
     background-color: rgb(235, 1, 145);
     border-radius: 12px;
+}
+
+.content-wrapper.event-info {
+    z-index: 2;
+    padding-bottom: 24px;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.container {
+    width: 1100px;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-lg-8 {
+    width: 66.66666667%;
+}
+
+.text-block {
+    display: inline-block;
+    margin-bottom: 12px;
+    margin-top: 16px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background-color: rgb(58, 226, 36);
+    color: #fff;
+    font-size: 9px;
+    line-height: 100%;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.event-name {
+    color: rgb(235, 1, 145);
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 30px;
+    line-height: 100%;
+    font-weight: 900;
+    letter-spacing: .2px;
+}
+
+a, a:link, a:visited {
+    text-decoration: none;
+    color: #00aeef;
+    outline: 0;
+    -webkit-transition: all .25s;
+    -moz-transition: all .25s;
+    -o-transition: all .25s;
+    transition: all .25s;
+    cursor: pointer;
+}
+
+.event-info-city {
+    display: contents;
+    margin-right: 8px;
+    padding-left: 24px;
+    background-position: 0 5px;
+    background-repeat: no-repeat;
+    color: #000;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: .3px;
+}
+
+#imgLocation{
+    height: 10px;
+}
+
+.event-info-calendar {
+    display: contents;
+    margin-right: 8px;
+    padding-left: 24px;
+    background-position: 0 6px;
+    background-repeat: no-repeat;
+    color: #000;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: .3px;
+}
+
+#imgCalendar{
+    height: 10px;
+}
+
+.event-content-section:nth-child(even) {
+    background-color: #f3f3f3;
+}
+
+.container {
+    width: 1100px;
+}
+
+
+.col-lg-8 {
+    width: 66.66666667%;
+}
+
+.heading {
+    margin-top: 4px;
+    margin-bottom: 16px;
+    color: rgb(235, 1, 145);
+    font-size: 14px;
+    line-height: 32px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.col-xs-12 {
+    width: 100%;
+}
+
+.progrm{
+    margin-top: 4px;
+    margin-bottom: 16px;
+    color: rgb(235, 1, 145);
+    font-size: 14px;
+    line-height: 32px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.kill-top-margin {
+    margin-top: 0!important;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+.padding-top-20 {
+    padding-top: 20px!important;
 }
