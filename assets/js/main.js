@@ -19,16 +19,16 @@ function closeAllModal (idModal, event){
     })
 }
 
-async function insert(event) {
-    event.preventDefault()
-    const formData = new FormData(event.target)
-    const response = await fetch('backend/insert.php', {
-        method: 'POST',
-        body: formData
-    })
-    const result = await response.json()
-    if(result?.success){
-        closeAllModal()
-        alert('Seu filme '+result.data.titulo+' foi cadastrado com sucesso!')
-    }
-}
+// async function insert(event) {
+//     event.preventDefault()
+//     const formData = new FormData(event.target)
+//     const response = await fetch('backend/insert.php', {
+//         method: 'POST',
+//         body: formData
+//     })
+//     const result = await response.json()
+//     if(result?.success){
+//         closeAllModal()
+//         alert('Seu filme '+result.data.titulo+' foi cadastrado com sucesso!')
+//     }
+// }

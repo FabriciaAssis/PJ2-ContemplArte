@@ -1,16 +1,26 @@
 .html, body *{
-        font-family: 'Times New Roman', Times, serif;   
+    font-family: 'Times New Roman', Times, serif;   
 
 }
+
+/* .container {
+    width: 1440px;
+}
+
+.container, .container-sm, .container-md, .container-lg, .container-xl {
+    max-width: 2145px;
+} */
+
 .bg-primary {
     background-color: rgb(25, 9, 39) !important;
     font-style:italic;
+    
 }
 
 .navbar-light .navbar-brand{
     color:rgb(235, 1, 145); 
-    font-family: fantasy;
-    font-size: small;
+    /* font-family: fantasy; */
+    /* font-size: small; */
 }
 
 .navbar-light .navbar-brand:hover{
@@ -23,6 +33,10 @@
 
 .navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
     color: rgb(235, 1, 145);
+}
+
+.navbar-light .navbar-toggler {
+    border-color: rgb(255 1 189 / 51%);
 }
 
 .navbar-nav .dropdown-menu {
