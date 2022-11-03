@@ -1,5 +1,6 @@
-.html, body *{
-    font-family: 'Times New Roman', Times, serif;   
+.html,
+body * {
+    font-family: 'Times New Roman', Times, serif;
 
 }
 
@@ -13,25 +14,28 @@
 
 .bg-primary {
     background-color: rgb(25, 9, 39) !important;
-    font-style:italic;
-    
+    font-style: italic;
+
 }
 
-.navbar-light .navbar-brand{
-    color:rgb(235, 1, 145); 
+.navbar-light .navbar-brand {
+    color: rgb(235, 1, 145);
     /* font-family: fantasy; */
     /* font-size: small; */
 }
 
-.navbar-light .navbar-brand:hover{
+.navbar-light .navbar-brand:hover {
     color: rgb(255, 82, 189);
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color:rgb(235, 1, 145) ; 
+    color: rgb(235, 1, 145);
 }
 
-.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
+.navbar-light .navbar-nav .show>.nav-link,
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .nav-link.active {
     color: rgb(235, 1, 145);
 }
 
@@ -59,27 +63,29 @@
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-    color:rgb(255, 82, 189); 
+    color: rgb(255, 82, 189);
 }
 
 
-body > footer{
+body>footer {
     text-align: center;
     /* height: 400px; */
     padding: 100px 50px;
 }
 
-#bntCad{
+#bntCad {
     background-color: rgb(235, 1, 145);
     border-radius: 12px;
     padding: 5px;
 }
 
-.modal{
+.modal {
     /* background: #0c0c0c85; */
     /* backdrop-filter: blur(5px); */
     position: absolute;
-    display: /*flex*/ none;
+    display:
+        /*flex*/
+        none;
     top: 0;
     left: 0;
     bottom: 0;
@@ -88,7 +94,7 @@ body > footer{
     align-items: center;
 }
 
-.modal .modal-body{
+.modal .modal-body {
     width: 600px;
     margin: 155px;
     border-radius: 15px;
@@ -97,28 +103,28 @@ body > footer{
     padding: 30px 70px;
 }
 
-.modal .modal-body form{
+.modal .modal-body form {
     display: flex;
     flex-direction: column;
 }
 
-.modal .modal-body form label{
+.modal .modal-body form label {
     margin: 15px 0 0 0;
 }
 
-.modal .modal-body form input[type=text]{
+.modal .modal-body form input[type=text] {
     height: 30px;
     padding: 3px 5px;
     border-radius: 10px;
 }
 
-.modal .modal-body form input[type=password]{
+.modal .modal-body form input[type=password] {
     height: 30px;
     padding: 3px 5px;
     border-radius: 10px;
 }
 
-.modal .modal-body form button{
+.modal .modal-body form button {
     background-color: rgb(235, 1, 145);
     border-radius: 12px;
 }
@@ -162,16 +168,18 @@ body > footer{
 }
 
 .event-name {
-    color: rgb(235, 1, 145);
+    color: rgb(235, 1, 145) !important;
     margin-top: 0;
     margin-bottom: 16px;
-    font-size: 30px;
+    font-size: 15px;
     line-height: 100%;
     font-weight: 900;
     letter-spacing: .2px;
 }
 
-a, a:link, a:visited {
+a,
+a:link,
+a:visited {
     text-decoration: none;
     color: #00aeef;
     outline: 0;
@@ -194,7 +202,7 @@ a, a:link, a:visited {
     letter-spacing: .3px;
 }
 
-#imgLocation{
+#imgLocation {
     height: 10px;
 }
 
@@ -210,7 +218,7 @@ a, a:link, a:visited {
     letter-spacing: .3px;
 }
 
-#imgCalendar{
+#imgCalendar {
     height: 10px;
 }
 
@@ -242,7 +250,7 @@ a, a:link, a:visited {
     width: 100%;
 }
 
-.progrm{
+.progrm {
     margin-top: 4px;
     margin-bottom: 16px;
     color: rgb(235, 1, 145);
@@ -254,7 +262,7 @@ a, a:link, a:visited {
 }
 
 .kill-top-margin {
-    margin-top: 0!important;
+    margin-top: 0 !important;
 }
 
 p {
@@ -262,5 +270,228 @@ p {
 }
 
 .padding-top-20 {
-    padding-top: 20px!important;
+    padding-top: 20px !important;
+}
+
+/* createAccont */
+
+.borderIland {
+    width: 450px;
+    border-radius: 8px;
+    border: 1px solid rgb(60, 28, 88);
+    display: block;
+    flex-shrink: 0;
+    margin: 20px auto;
+    margin-top: 50px;
+    min-height: 0;
+    width: 450px;
+}
+
+.ilandAccont{
+    height: auto;
+    min-height: 430px;
+    padding: 48px 40px 36px;
+}
+
+.formsHouse{
+    box-sizing: inherit;
+    display: block;
+    margin: 5px;
+    padding: 0;
+}
+
+.logo{
+    justify-content: flex-start;
+    display: flex;
+    height: 24px;
+}
+
+.ilandForm{
+    box-sizing: inherit;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.formHeader{
+    text-align: left;
+}
+
+.h1FmHdr{
+    text-indent: -1px;
+    color: #202124;
+    padding-bottom: 0;
+    padding-top: 16px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.3333;
+    margin-bottom: 0;
+    margin-top: 0;
+    word-break: break-word;
+}
+
+.utlEmail{
+    text-indent: -1px;
+    color: #202124;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+    line-height: 1.5;
+    padding-bottom: 0;
+    padding-top: 8px;
+}
+.inputIland{
+    font-size: .1px;
+    white-space: nowrap;
+    margin: auto -40px;
+}
+
+.inputsHome{
+    margin: auto -40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 16px;
+    margin-top: 0;
+    white-space: normal;
+}
+
+.inputGroup{
+    box-sizing: inherit;
+}
+
+.inputGroup{
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.typingArea{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pnome{
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex-grow: 1;
+    flex-grow: 2;
+    margin-right: 8px;
+    width: 0;
+}
+
+.pnomechild{
+    padding-top: 8px;
+    box-sizing: content-box;
+}
+
+.pnome-Scnd{
+    height: 36px;
+    padding-top: 0;
+}
+
+.third{
+    align-items: center;
+    position: static;
+}
+
+.pnomeInput{
+    box-sizing: inherit;
+}
+
+.firstName{
+    font-size: 14px;
+    height: 20px;
+    padding: 6px 8px;
+}
+
+.sbrnome{
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex-grow: 1;
+    flex-grow: 2;
+    margin-left: 196px;
+    margin-top: -43px;
+    width: 0;
+}
+
+.sbrnomechild{
+    padding-top: 8px;
+    box-sizing: content-box;
+}
+
+.sbrnome-Scnd{
+    height: 36px;
+    padding-top: 0;
+}
+
+.sbr-third{
+    align-items: center;
+    position: static;
+    display: flex;
+}
+
+.sbrnomeInput{
+    box-sizing: inherit;
+    flex-shrink: 1;
+    min-width: 0%;
+    position: relative;
+}
+
+.sbrName{
+    font-size: 14px;
+    height: 20px;
+    padding: 6px 8px;
+}
+
+.typingEmail{
+    padding-top: 24px;
+    padding: 24px 0 0;
+    padding-bottom: 0;
+}
+.inputArea{
+    height: 36px;
+}
+
+.emailArea{
+    direction: ltr;
+    text-align: left;
+    align-items: center;
+    position: static;
+    top: 0px;
+}
+
+.email{
+    box-sizing: inherit;
+}
+
+.inptEmail{
+    font-size: 14px;
+    height: 20px;
+    width: 366px;
+    padding: 7px 9px;
+}
+
+.dicAviso{
+    box-sizing: inherit;
+    display: flex;
+}
+
+.aviso{
+    margin-left: 10px;
+    /* text-indent: -5px; */
+    color: #202124;
+    font-size: 12px;
+    /* font-weight: 400; */
+    letter-spacing: 0.1px;
+    line-height: 1.5;
+    padding-bottom: 0;
+    padding-top: 7px;
+}
+
+.bntCreateLog{
+    background-color: rgb(235 1 145 / 50%);
+    border: 0;
+    width: 183px;
+    height: 40px;
+    margin-left: 95px;
+    padding-left: 8px;
+    margin-top: 28px;
 }

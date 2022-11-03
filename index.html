@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -154,7 +154,7 @@
                 <div>___________________________________________________________________</div>
                 <!-- <div><b><font color="#ff0000"> (12) 99769-2612</font></b></div> -->
                 <div><b>
-                        <font color="#ff0000"></font><a href="#">INSCRIÇÕES</a></font>
+                        <font color="#ff0000"><a href="#">INSCRIÇÕES</a></font>
                     </b></div>
                 <div><br></div>
                 <div><br></div>
@@ -170,12 +170,12 @@
     <div class="modal" id="modal-cadastrar" onclick="hideModal('#modal-cadastrar', event)">
         <div class="modal-body">
             <h2>Entrar na Conta</h2>
-            <form onsubmit="insert(event)">
+            <form action="" method="post">
                 <!-- method="POST" action="backend/insert.php" -->
                 <label>Email:</label>
                 <input type="text" name="email"><label>Senha:</label>
                 <input type="password" name="senha">
-                <a href="" id="escSenha">Esqueceu a senha?</a>
+                <a href="craeteAccont.html" id="escSenha">Não tem uma conta? Criar conta</a>
                 <button type="submit">Entrar</button>
             </form>
         </div>
