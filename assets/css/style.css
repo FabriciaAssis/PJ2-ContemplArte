@@ -4,13 +4,18 @@ body * {
 
 }
 
-/* .container {
+ .container {
     width: 1440px;
 }
-
+/*
 .container, .container-sm, .container-md, .container-lg, .container-xl {
     max-width: 2145px;
 } */
+
+.firstConteiner {
+    width: 1100px;
+    min-width: max-content;
+}
 
 .bg-primary {
     background-color: rgb(25, 9, 39) !important;
@@ -19,7 +24,7 @@ body * {
 }
 
 .navbar-light .navbar-brand {
-    color: rgb(235, 1, 145);
+    color: #eb0191;
     /* font-family: fantasy; */
     /* font-size: small; */
 }
@@ -29,14 +34,14 @@ body * {
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: rgb(235, 1, 145);
+    color: #eb0191;
 }
 
 .navbar-light .navbar-nav .show>.nav-link,
 .navbar-light .navbar-nav .active>.nav-link,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .nav-link.active {
-    color: rgb(235, 1, 145);
+    color: #eb0191;
 }
 
 .navbar-light .navbar-toggler {
@@ -55,7 +60,7 @@ body * {
     padding: 0.25rem 1.5rem;
     clear: both;
     font-weight: 400;
-    color: rgb(235, 1, 145);
+    color: #eb0191;
     text-align: inherit;
     white-space: nowrap;
     background-color: transparent;
@@ -74,7 +79,7 @@ body>footer {
 }
 
 #bntCad {
-    background-color: rgb(235, 1, 145);
+    background-color: #eb0191;
     border-radius: 12px;
     padding: 5px;
 }
@@ -99,7 +104,7 @@ body>footer {
     margin: 155px;
     border-radius: 15px;
     background: rgb(60, 28, 88);
-    color: rgb(235, 1, 145);
+    color: #eb0191;
     padding: 30px 70px;
 }
 
@@ -125,7 +130,7 @@ body>footer {
 }
 
 .modal .modal-body form button {
-    background-color: rgb(235, 1, 145);
+    background-color: #eb0191;
     border-radius: 12px;
 }
 
@@ -168,7 +173,7 @@ body>footer {
 }
 
 .event-name {
-    color: rgb(235, 1, 145) !important;
+    color: #eb0191 !important;
     margin-top: 0;
     margin-bottom: 16px;
     font-size: 15px;
@@ -238,7 +243,7 @@ a:visited {
 .heading {
     margin-top: 4px;
     margin-bottom: 16px;
-    color: rgb(235, 1, 145);
+    color: #eb0191;
     font-size: 14px;
     line-height: 32px;
     font-weight: 500;
@@ -253,7 +258,7 @@ a:visited {
 .progrm {
     margin-top: 4px;
     margin-bottom: 16px;
-    color: rgb(235, 1, 145);
+    color: #eb0191;
     font-size: 14px;
     line-height: 32px;
     font-weight: 500;
