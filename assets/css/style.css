@@ -177,13 +177,19 @@ a,
 a:link,
 a:visited {
     text-decoration: none;
-    color: #00aeef;
+    color: #eb0191;
     outline: 0;
     -webkit-transition: all .25s;
     -moz-transition: all .25s;
     -o-transition: all .25s;
     transition: all .25s;
     cursor: pointer;
+}
+
+a,
+a:link,
+a:visited :hover {
+    color: rgb(255, 82, 189);
 }
 
 .event-info-city {
@@ -245,6 +251,9 @@ a:visited {
 .col-xs-12 {
     width: 100%;
 }
+.dataSpan {
+    color:#eb0191;
+}
 
 .progrm {
     margin-top: 4px;
@@ -255,6 +264,11 @@ a:visited {
     font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
+}
+
+.progrmSpan {
+font-size: small;
+font-weight: bold
 }
 
 .kill-top-margin {

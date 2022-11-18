@@ -1,14 +1,118 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Incscrições|ContemplArte</title>
 </head>
+
 <body>
-    <div class="conteiner">
-        
+    <div class="firstConteiner">
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+
+            <!-- elemento destaque q funciona como se fosse um logo q manda para pag inicial -->
+            <a href="index.html" class="navbar-brand">ContemplArte</a>
+
+            <!-- criou o batão para quando a tela for pequena -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsite">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- itens do navbar -->
+            <div class="navbar-collapse collapse" id="navbarsite">
+                <!-- <ul class="navbar-nav">
+                    <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Perfil</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Serviços</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Testemunhos</a></li>
+                </ul> -->
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+
+                        <a href="#" class="nav-link dropdown-toglle" data-toggle="dropdown" id="navDrop">
+                            Contatos
+                        </a>
+                        <div class="dropdown-menu w-25">
+                            <a href="https://wa.me/5512997692612" class="dropdown-item">WhatsApp</a>
+                            <a href="https://www.instagram.com/con.templ_arte/" class="dropdown-item">Instagram</a>
+                        </div>
+
+
+                    </li>
+                    <button onclick="showModal('#modal-cadastrar')" id="bntCad">Login</button>
+                </ul>
+
+            </div>
+        </nav> <!-- nav class="navbar"> -->
+
+        <!-- Carousel -->
+        <div class="carrousel slide" id="carouselhome" data-ride="carousel">
+            <!-- div q vai sustentar as imgs do carousel -->
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="assets/img/ContemplArte.carousel.png" class="img-fluid d-block">
+                    <div class="carousel-caption"></div>
+                </div> <!-- item 1 do carousel -->
+            </div> <!-- div class="carousel-inner"-->
+        </div> <!-- Carousel -->
+    </div> <!-- firstConteiner-->
+
+    <div class="container">
+
+        <!-- Primeira linha contem umtexto de boas vindas -->
+        <div class="row">
+            <div class="col-12 text-center my-5">
+                <h2>Escolha já sua aula e venha se divertir!</h2>
+                <p><i>"uma frase de qlqr"</i></p>
+            </div>
+        </div>
     </div>
+    <!--conteiner-->
+
+    <div class="event-content-section">
+        <div class="container padding-top-40" id="descricao">
+            <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12" id="event-txt">
+                <h3 class="heading" id="description">Programação</h3>
+                <div>
+                    <div><span class="progrmSpan">27 de dezembro (terça-feira)</span> - Abertura e Recepção</div>
+                    <div>09h - Apresentação do evento e de professores</div>
+                    <div>9:30 - Credenciamento dos inscritos</div>
+                    <div>10h - Aula de ballet</div>
+                    <div><b>14:30 - Intervalo para almoço</b></div>
+                    <div>15h - Aula de dança de rua</div>
+                    <div>19:30 - Palestra "Desafios da Carreira Artistica"</div>
+                    <div><b>21h - Intervalo para janta</b></div>
+                    <br>
+                    <div><span class="progrmSpan">28 de  dezembro (quarta-feira)</span> - Reta final</div>
+                    <div>09h - Café da manhã<br></div>
+                    <div>10h - Aula de tango<br></div>
+                    <div><b>14:30 - Intervalo para almoço</b><br></div>
+                    <div>15h - Batalha de dança</div>
+                    <div>19h - Preparatórios para o baile</span><br></div>
+                    <div><b>19:30 - Baile</b></div>
+                    <div>00:00 - Resultado da batalha</div>
+                </div>
+                <hr>
+                <div><br></div>
+                <div><br></div>
+                <div><br></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- tag para o botão sanduiche funcionar -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+
+    <!--Faz a 'animação' do botão de login-->
+    <script src="assets/js/main.js"></script>
 </body>
+
 </html>
