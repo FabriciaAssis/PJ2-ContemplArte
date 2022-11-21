@@ -326,9 +326,9 @@ p {
     text-align: left;
 }
 
-.h1FmHdr{
+.createAcc{
     text-indent: -1px;
-    color: #202124;
+    color: #000000;
     padding-bottom: 0;
     padding-top: 16px;
     font-size: 24px;
@@ -336,19 +336,9 @@ p {
     line-height: 1.3333;
     margin-bottom: 0;
     margin-top: 0;
-    word-break: break-word;
 }
 
-.utlEmail{
-    text-indent: -1px;
-    color: #202124;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 0.1px;
-    line-height: 1.5;
-    padding-bottom: 0;
-    padding-top: 8px;
-}
+
 .inputIland{
     font-size: .1px;
     white-space: nowrap;
@@ -366,134 +356,35 @@ p {
 
 .inputGroup{
     box-sizing: inherit;
-}
-
-.inputGroup{
     margin-top: 0;
     padding-top: 0;
-}
-
-.typingArea{
-    display: flex;
-    justify-content: space-between;
-}
-
-.pnome{
-    -webkit-box-flex: 1;
-    box-flex: 1;
-    -webkit-flex-grow: 1;
-    flex-grow: 2;
-    margin-right: 8px;
-    width: 0;
-}
-
-.pnomechild{
-    padding-top: 8px;
-    box-sizing: content-box;
-}
-
-.pnome-Scnd{
-    height: 36px;
-    padding-top: 0;
-}
-
-.third{
-    align-items: center;
-    position: static;
-}
-
-.pnomeInput{
-    box-sizing: inherit;
+    padding-left: 5px;
 }
 
 .firstName{
     font-size: 14px;
     height: 20px;
-    padding: 6px 8px;
-}
+    width: 290px;
+    padding: 7px 9px;
+    margin-bottom: 15px;
 
-.sbrnome{
-    -webkit-box-flex: 1;
-    box-flex: 1;
-    -webkit-flex-grow: 1;
-    flex-grow: 2;
-    margin-left: 196px;
-    margin-top: -43px;
-    width: 0;
-}
-
-.sbrnomechild{
-    padding-top: 8px;
-    box-sizing: content-box;
-}
-
-.sbrnome-Scnd{
-    height: 36px;
-    padding-top: 0;
-}
-
-.sbr-third{
-    align-items: center;
-    position: static;
-    display: flex;
-}
-
-.sbrnomeInput{
-    box-sizing: inherit;
-    flex-shrink: 1;
-    min-width: 0%;
-    position: relative;
-}
-
-.sbrName{
-    font-size: 14px;
-    height: 20px;
-    padding: 6px 8px;
-}
-
-.typingEmail{
-    padding-top: 24px;
-    padding: 24px 0 0;
-    padding-bottom: 0;
-}
-.inputArea{
-    height: 36px;
-}
-
-.emailArea{
-    direction: ltr;
-    text-align: left;
-    align-items: center;
-    position: static;
-    top: 0px;
-}
-
-.email{
-    box-sizing: inherit;
 }
 
 .inptEmail{
     font-size: 14px;
     height: 20px;
-    width: 366px;
+    width: 290px;
     padding: 7px 9px;
-}
-
-.dicAviso{
-    box-sizing: inherit;
-    display: flex;
 }
 
 .aviso{
     margin-left: 10px;
-    /* text-indent: -5px; */
     color: #202124;
     font-size: 12px;
-    /* font-weight: 400; */
     letter-spacing: 0.1px;
     line-height: 1.5;
-    padding-bottom: 0;
-    padding-top: 7px;
+    padding-bottom: 11px;
+    padding-top: 3px;
 }
 
 .bntCreateLog{
