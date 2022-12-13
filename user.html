@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Inscrições|ContemplArte</title>
+    <title>Minhas Inscrições |ContemplArte</title>
 </head>
 
-<body>
+<body onload= "loadProductions()">
     <div class="firstConteiner">
         <nav class="navbar navbar-expand-lg navbar-light bg-primary">
 
@@ -24,13 +24,6 @@
 
             <!-- itens do navbar -->
             <div class="navbar-collapse collapse" id="navbarsite">
-                <!-- <ul class="navbar-nav">
-                    <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Perfil</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Serviços</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Testemunhos</a></li>
-                </ul> -->
-
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item dropdown">
 
@@ -68,60 +61,68 @@
     <div class="container">
 
         <!-- Primeira linha contem umtexto de boas vindas -->
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-12 text-center my-5">
-                <h2>Escolha já sua aula e venha se divertir!</h2>
                 <p><i>"Para mim a dança é como a vida. Você não escolhe, ela simplesmente acontece."</i></p>
             </div>
-        </div>
+        </div> -->
     </div>
     <!--conteiner-->
+    <main>
+        <section class="container">
+            <h1 class="section-title">Suas Incrições</h1>
+            <header id="content-header" class="container flex-sb">
+                <div class="bradcrump"></div>
+                <button onclick="showModal('#modal-cadastrar')">Fazer incrição</button>
+            </header>
+            <article id="productions">
+                <div class="card-insc">
+                </div>
 
-    <div class="event-content-section">
-        <div class="container padding-top-40" id="descricao">
-            <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12" id="event-txt">
-                <h3 class="heading" id="description">Programação</h3>
-                <div>
-                    <div><span class="progrmSpan">27 de dezembro (terça-feira)</span> - Abertura e Recepção</div>
-                    <div>09h - Apresentação do evento e de professores</div>
-                    <div>9:30 - Credenciamento dos inscritos</div>
-                    <div>10h - Aula de ballet</div>
-                    <div><b>14:30 - Intervalo para almoço</b></div>
-                    <div>15h - Aula de dança de rua</div>
-                    <div>19:30 - Palestra "Desafios da Carreira Artistica"</div>
-                    <div><b>21h - Intervalo para janta</b></div>
-                    <br>
-                    <div><span class="progrmSpan">28 de  dezembro (quarta-feira)</span> - Reta final</div>
-                    <div>09h - Café da manhã<br></div>
-                    <div>10h - Aula de tango<br></div>
-                    <div><b>14:30 - Intervalo para almoço</b><br></div>
-                    <div>15h - Batalha de dança</div>
-                    <div>19h - Preparatórios para o baile</span><br></div>
-                    <div><b>19:30 - Baile</b></div>
-                    <div>00:00 - Resultado da batalha</div>
+                <div class="card-insc">
                 </div>
-                <hr>
-                <div><br></div>
-                <div class="incGeral">
-                    <form action="backend/insert.php" method="post">
-                        <legend>Faça já sua incrição para o workshop</legend>
-                        <label>Nome Completo:</label>
-                        <input type="text" name="fullName"><br>
-                        <label>CPF:</label>
-                        <input type="text" name="cpf"><br>
-                        <label>Data de Nascimento:</label>
-                        <input type="date" name="dataNas" id="dataNas"><br>
-                        <label>Sexo:</label>
-                        <input type="text" name="sexo" placeholder="insira 'F' para feminino e 'M' para masculino"><br>
-                          <label>E-Mail:</label>
-                          <input type="text" name="email"><br>
-                          <button type="submit">Cadastrar</button>
-                    </form>
+                <div class="card-insc">
                 </div>
-                <hr>
-                <div><br></div>
-                <div><br></div>
-            </div>
+
+            </article>
+        </section>
+    </main>
+
+    <div class="modal" id="modal-cadastrar" onclick="hideModal('#modal-cadastrar', event)">
+        <div class="modal-body">
+            <h1>Adicionar Produção</h1>
+            <form onsubmit="insert(event)">
+                <label>Nome Completo:</label>
+                <input type="text" name="fullName"><br>
+                <label>CPF:</label>
+                <input type="text" name="cpf"><br>
+                <label>Data de Nascimento:</label>
+                <input type="date" name="dataNas" id="dataNas"><br>
+                <label>Sexo:</label>
+                <input type="text" name="sexo" placeholder="insira 'F' para feminino e 'M' para masculino"><br>
+                  <label>E-Mail:</label>
+                  <input type="text" name="email"><br>
+                  <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+    <div class="modal" id="modal-editar" onclick="hideModal('#modal-editar', event)">
+        <div class="modal-body">
+            <h1>Editar Produção</h1>
+            <form onsubmit="edit(event)">
+                <label>Nome Completo:</label>
+                <input type="text" name="fullName"><br>
+                <label>CPF:</label>
+                <input type="text" name="cpf"><br>
+                <label>Data de Nascimento:</label>
+                <input type="date" name="dataNas" id="dataNas"><br>
+                <label>Sexo:</label>
+                <input type="text" name="sexo" placeholder="insira 'F' para feminino e 'M' para masculino"><br>
+                  <label>E-Mail:</label>
+                  <input type="text" name="email"><br>
+                <input type="hidden" name="id">
+                <button type="submit">Editar</button>
+            </form>
         </div>
     </div>
 

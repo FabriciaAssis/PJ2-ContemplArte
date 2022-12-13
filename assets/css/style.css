@@ -75,13 +75,14 @@ body>footer {
     padding: 5px;
 }
 
+#userImg {
+    height: 25px;
+}
+
 .modal {
-    /* background: #0c0c0c85; */
-    /* backdrop-filter: blur(5px); */
+
     position: absolute;
-    display:
-        /*flex*/
-        none;
+    display: none;
     top: 0;
     left: 0;
     bottom: 0;
@@ -92,7 +93,7 @@ body>footer {
 
 .modal .modal-body {
     width: 600px;
-    margin: 155px;
+    margin: 325px;
     border-radius: 15px;
     background: rgb(60, 28, 88);
     color: #eb0191;
@@ -105,7 +106,7 @@ body>footer {
 }
 
 .modal .modal-body form label {
-    margin: 15px 0 0 0;
+    margin: 0;
 }
 
 .modal .modal-body form input[type=text] {
@@ -283,7 +284,7 @@ p {
     padding-top: 20px !important;
 }
 
-/* createAccont */
+/* Cadastro.html */
 
 .borderIland {
     width: 450px;
@@ -299,7 +300,7 @@ p {
 
 .ilandAccont{
     height: auto;
-    min-height: 430px;
+    min-height: 345px;
     padding: 48px 40px 36px;
 }
 
@@ -361,16 +362,7 @@ p {
     padding-left: 5px;
 }
 
-.firstName{
-    font-size: 14px;
-    height: 20px;
-    width: 290px;
-    padding: 7px 9px;
-    margin-bottom: 15px;
-
-}
-
-.inptEmail{
+.login{
     font-size: 14px;
     height: 20px;
     width: 290px;
@@ -387,12 +379,13 @@ p {
     padding-top: 3px;
 }
 
-.bntCreateLog{
+.bntCreateLog {
     background-color: rgb(235 1 145 / 50%);
     border: 0;
     width: 183px;
     height: 40px;
-    margin-left: 95px;
+    margin-left: 64px;
     padding-left: 8px;
     margin-top: 28px;
+    border-radius: 8px;
 }

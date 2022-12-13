@@ -41,10 +41,12 @@
                             <a href="https://wa.me/5512997692612" class="dropdown-item">WhatsApp</a>
                             <a href="https://www.instagram.com/con.templ_arte/" class="dropdown-item">Instagram</a>
                         </div>
-
-
                     </li>
-                    <button onclick="showModal('#modal-cadastrar')" id="bntCad">Login</button>
+                    <button id="bntCad">
+                        <a class="userImg" href="user.html" class="nav-link dropdown-toglle">
+                            <img src="assets/img/user-svgrepo-com.svg" alt="" style="height: 25px;">
+                        </a>
+                    </button>
                 </ul>
 
             </div>
@@ -143,7 +145,7 @@
                 <div>Vem dançar com a gente, contamos com a sua presença!</div>
                 <hr>
                 <div><b>
-                    <a href="inscricoes.html">FAÇA SUA INCRIÇÃO</a>
+                    <a href="inscricoes.html" style="text-decoration: underline;">FAÇA SUA INCRIÇÃO</a>
                     </b></div>
                 <div><br></div>
                 <div><br></div>
@@ -156,20 +158,6 @@
         <!--Aql coisinha q fica lá em baixo do site-->
         <p>© Copyrigh 2022 Contemplarte | Todos direitos Reservados</p>
     </footer>
-    <div class="modal" id="modal-cadastrar" onclick="hideModal('#modal-cadastrar', event)">
-        <div class="modal-body">
-            <h2>Entrar na Conta</h2>
-            <form action="" method="post">
-                <!--arrumar a localização apos clicar no bnt (qnd clicar vai entrar na pag de incrições)-->
-                <!-- method="POST" action="backend/insert.php" -->
-                <label>Email:</label>
-                <input type="text" name="email"><label>Senha:</label>
-                <input type="password" name="senha">
-                <a href="craeteAccont.html" id="escSenha">Não tem uma conta? Criar conta</a>
-                <button type="submit">Entrar</button>
-            </form>
-        </div>
-    </div>
 
     <!-- tag para o botão sanduiche funcionar -->
     <script src="assets/js/jquery.js"></script>
