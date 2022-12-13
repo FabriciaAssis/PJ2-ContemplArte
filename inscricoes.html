@@ -43,7 +43,7 @@
                         </div>
                     </li>
                     <button id="bntCad">
-                        <a class="userImg" href="user.html" class="nav-link dropdown-toglle">
+                        <a class="userImg" href="inscricoes.html" class="nav-link dropdown-toglle">
                             <img src="assets/img/user-svgrepo-com.svg" alt="" style="height: 25px;">
                         </a>
                     </button>
@@ -102,21 +102,62 @@
                 </div>
                 <hr>
                 <div><br></div>
-                <div class="incGeral">
-                    <form action="backend/insert.php" method="post">
-                        <legend>Faça já sua incrição para o workshop</legend>
-                        <label>Nome Completo:</label>
-                        <input type="text" name="fullName"><br>
-                        <label>CPF:</label>
-                        <input type="text" name="cpf"><br>
-                        <label>Data de Nascimento:</label>
-                        <input type="date" name="dataNas" id="dataNas"><br>
-                        <label>Sexo:</label>
-                        <input type="text" name="sexo" placeholder="insira 'F' para feminino e 'M' para masculino"><br>
-                          <label>E-Mail:</label>
-                          <input type="text" name="email"><br>
-                          <button type="submit">Cadastrar</button>
-                    </form>
+                <main>
+                    <section class="container">
+                        <h1 class="section-title">Suas Incrições</h1>
+                        <header id="content-header" class="container flex-sb">
+                            <div class="bradcrump"></div>
+                            <button onclick="showModal('#modal-cadastrar')">Fazer incrição</button>
+                        </header>
+                        <article id="productions">
+                            <div class="card-insc">
+                            </div>
+            
+                            <div class="card-insc">
+                            </div>
+                            <div class="card-insc">
+                            </div>
+            
+                        </article>
+                    </section>
+                </main>
+            
+                <div class="modal" id="modal-cadastrar" onclick="hideModal('#modal-cadastrar', event)">
+                    <div class="modal-body">
+                        <h1>Adicionar Produção</h1>
+                        <form onsubmit="insert(event)">
+                            <label>Nome Completo:</label>
+                            <input type="text" name="fullName"><br>
+                            <label>CPF:</label>
+                            <input type="text" name="cpf"><br>
+                            <label>Data de Nascimento:</label>
+                            <input type="date" name="dataNas" id="dataNas"><br>
+                            <label>Sexo:</label>
+                            <input type="text" name="sexo" placeholder="insira 'F' para feminino e 'M' para masculino"><br>
+                            <label>E-Mail:</label>
+                            <input type="text" name="email"><br>
+                            <button type="submit">Cadastrar</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal" id="modal-editar" onclick="hideModal('#modal-editar', event)">
+                    <div class="modal-body">
+                        <h1>Editar Produção</h1>
+                        <form onsubmit="edit(event)">
+                            <label>Nome Completo:</label>
+                            <input type="text" name="fullName"><br>
+                            <label>CPF:</label>
+                            <input type="text" name="cpf"><br>
+                            <label>Data de Nascimento:</label>
+                            <input type="date" name="dataNas" id="dataNas"><br>
+                            <label>Sexo:</label>
+                            <input type="text" name="sexo" placeholder="insira 'F' para feminino e 'M' para masculino"><br>
+                            <label>E-Mail:</label>
+                            <input type="text" name="email"><br>
+                            <input type="hidden" name="id">
+                            <button type="submit">Editar</button>
+                        </form>
+                    </div>
                 </div>
                 <hr>
                 <div><br></div>
