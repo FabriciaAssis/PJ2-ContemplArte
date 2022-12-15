@@ -9,14 +9,14 @@
              $id = $_GET['id'];
          }
 
-         $stmt = $conn->prepare("DELETE FROM producoes WHERE id = :id;");
+         $stmt = $conn->prepare("DELETE FROM incGeral WHERE id = :id;");
          $stmt->bindParam(':id', $id);
          $stmt->execute();
 
          $count = $stmt->rowCount();
 
          if($count == 1){
-             $result["success"]["message"] = "Produção deletada com sucesso!";
+             $result["success"]["message"] = "Inscrição deletada com sucesso!";
          } else{
             $result["error"]["message"] = "ID: $id não encontrado";
          }

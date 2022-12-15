@@ -1,177 +1,121 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Inscrições|ContemplArte</title>
+    <title>Inscrições | ContemplArte</title>
+
 </head>
 
-<body>
-    <div class="firstConteiner">
-        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-
-            <!-- elemento destaque q funciona como se fosse um logo q manda para pag inicial -->
-            <a href="index.html" class="navbar-brand">ContemplArte</a>
-
-            <!-- criou o batão para quando a tela for pequena -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsite">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- itens do navbar -->
-            <div class="navbar-collapse collapse" id="navbarsite">
-                <!-- <ul class="navbar-nav">
-                    <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Perfil</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Serviços</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Testemunhos</a></li>
-                </ul> -->
-
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
-
-                        <a href="#" class="nav-link dropdown-toglle" data-toggle="dropdown" id="navDrop">
-                            Contatos
-                        </a>
-                        <div class="dropdown-menu w-25">
-                            <a href="https://wa.me/5512997692612" class="dropdown-item">WhatsApp</a>
-                            <a href="https://www.instagram.com/con.templ_arte/" class="dropdown-item">Instagram</a>
-                        </div>
-                    </li>
-                    <button id="bntCad">
-                        <a class="userImg" href="inscricoes.html" class="nav-link dropdown-toglle">
-                            <img src="assets/img/user-svgrepo-com.svg" alt="" style="height: 25px;">
-                        </a>
-                    </button>
+<body onload="loadProductions()">
+    <header>
+        <div class="container main-header">
+            <a href="/PJ2-G12/">
+                <div id="logo">
+                    &nbsp;&nbsp;&nbsp;&nbsp;<h3><span>Contempl</span>Arte</h3>
+                </div>
+            </a>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="/PJ2-G12/">Sobre</a></li>
+                    <li><a href="inscricoes.html" class="active">Inscrções</a></li>
                 </ul>
-
+            </nav>
+        </div>
+    </header>
+    <br><br>
+    <main>
+        <br><br>
+        <section class="container">
+            <h1 class="section-title">Programação</h1>
+            <br>
+            <div style="padding-left: 25px; padding-right: 135px;">
+                <div><span class="progrmSpan">27 de dezembro (terça-feira)</span> - Abertura e Recepção</div>
+                <div>09h - Apresentação do evento e de professores</div>
+                <div>9:30 - Credenciamento dos inscritos</div>
+                <div>10h - Aula de ballet</div>
+                <div><b>14:30 - Intervalo para almoço</b></div>
+                <div>15h - Aula de dança de rua</div>
+                <div>19:30 - Palestra "Desafios da Carreira Artistica"</div>
+                <div><b>21h - Intervalo para janta</b></div>
+                <br>
+                <div><span class="progrmSpan">28 de dezembro (quarta-feira)</span> - Reta final</div>
+                <div>09h - Café da manhã<br></div>
+                <div>10h - Aula de tango<br></div>
+                <div><b>14:30 - Intervalo para almoço</b><br></div>
+                <div>15h - Batalha de dança</div>
+                <div>19h - Preparatórios para o baile</span><br></div>
+                <div><b>19:30 - Baile</b></div>
+                <div>00:00 - Resultado da batalha</div>
             </div>
-        </nav> <!-- nav class="navbar"> -->
+            <br>
+        </section>
+        <section class="container">
+            <header id="content-header" class="container flex-sb">
+                <div class="bradcrump"></div>
+                <button onclick="showModal('#modal-cadastrar')">Fazer Inscrição</button>
+            </header>
+            <article id="productions">
+                <div class="card-book">
+                </div>
 
-        <!-- Carousel -->
-        <div class="carrousel slide" id="carouselhome" data-ride="carousel">
-            <!-- div q vai sustentar as imgs do carousel -->
-            <div class="carousel-inner">
+                <div class="card-book">
+                </div>
+                <div class="card-book">
+                </div>
 
-                <div class="carousel-item active">
-                    <img src="assets/img/ContemplArte.carousel.png" class="img-fluid d-block">
-                    <div class="carousel-caption"></div>
-                </div> <!-- item 1 do carousel -->
-            </div> <!-- div class="carousel-inner"-->
-        </div> <!-- Carousel -->
-    </div> <!-- firstConteiner-->
+            </article>
+        </section>
+    </main>
 
-    <div class="container">
-
-        <!-- Primeira linha contem umtexto de boas vindas -->
-        <div class="row">
-            <div class="col-12 text-center my-5">
-                <h2>Escolha já sua aula e venha se divertir!</h2>
-                <p><i>"Para mim a dança é como a vida. Você não escolhe, ela simplesmente acontece."</i></p>
-            </div>
+    <div class="modal" id="modal-cadastrar" onclick="hideModal('#modal-cadastrar', event)">
+        <div class="modal-body">
+            <h1>Inscreva-se no ContemplArte</h1>
+            <form onsubmit="insert(event)">
+                <label>Nome Completo:</label>
+                <input type="text" name="nome">
+                <label>Cpf:</label>
+                <input type="text" name="cpf">
+                <label>Data de Nascimento:</label>
+                <input type="text" name="dataNas">
+                <label>Sexo:</label>
+                <input type="text" name="classificacao">
+                <label>Email:</label>
+                <input type="text" name="email">
+                <button type="submit">Cadastrar</button>
+            </form>
         </div>
     </div>
-    <!--conteiner-->
-
-    <div class="event-content-section">
-        <div class="container padding-top-40" id="descricao">
-            <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12" id="event-txt">
-                <h3 class="heading" id="description">Programação</h3>
-                <div>
-                    <div><span class="progrmSpan">27 de dezembro (terça-feira)</span> - Abertura e Recepção</div>
-                    <div>09h - Apresentação do evento e de professores</div>
-                    <div>9:30 - Credenciamento dos inscritos</div>
-                    <div>10h - Aula de ballet</div>
-                    <div><b>14:30 - Intervalo para almoço</b></div>
-                    <div>15h - Aula de dança de rua</div>
-                    <div>19:30 - Palestra "Desafios da Carreira Artistica"</div>
-                    <div><b>21h - Intervalo para janta</b></div>
-                    <br>
-                    <div><span class="progrmSpan">28 de  dezembro (quarta-feira)</span> - Reta final</div>
-                    <div>09h - Café da manhã<br></div>
-                    <div>10h - Aula de tango<br></div>
-                    <div><b>14:30 - Intervalo para almoço</b><br></div>
-                    <div>15h - Batalha de dança</div>
-                    <div>19h - Preparatórios para o baile</span><br></div>
-                    <div><b>19:30 - Baile</b></div>
-                    <div>00:00 - Resultado da batalha</div>
-                </div>
-                <hr>
-                <div><br></div>
-                <main>
-                    <section class="container">
-                        <h1 class="section-title">Suas Incrições</h1>
-                        <header id="content-header" class="container flex-sb">
-                            <div class="bradcrump"></div>
-                            <button onclick="showModal('#modal-cadastrar')">Fazer incrição</button>
-                        </header>
-                        <article id="productions">
-                            <div class="card-insc">
-                            </div>
-            
-                            <div class="card-insc">
-                            </div>
-                            <div class="card-insc">
-                            </div>
-            
-                        </article>
-                    </section>
-                </main>
-            
-                <div class="modal" id="modal-cadastrar" onclick="hideModal('#modal-cadastrar', event)">
-                    <div class="modal-body">
-                        <h1>Adicionar Produção</h1>
-                        <form onsubmit="insert(event)">
-                            <label>Nome Completo:</label>
-                            <input type="text" name="fullName"><br>
-                            <label>CPF:</label>
-                            <input type="text" name="cpf"><br>
-                            <label>Data de Nascimento:</label>
-                            <input type="date" name="dataNas" id="dataNas"><br>
-                            <label>Sexo:</label>
-                            <input type="text" name="sexo" placeholder="insira 'F' para feminino e 'M' para masculino"><br>
-                            <label>E-Mail:</label>
-                            <input type="text" name="email"><br>
-                            <button type="submit">Cadastrar</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="modal" id="modal-editar" onclick="hideModal('#modal-editar', event)">
-                    <div class="modal-body">
-                        <h1>Editar Produção</h1>
-                        <form onsubmit="edit(event)">
-                            <label>Nome Completo:</label>
-                            <input type="text" name="fullName"><br>
-                            <label>CPF:</label>
-                            <input type="text" name="cpf"><br>
-                            <label>Data de Nascimento:</label>
-                            <input type="date" name="dataNas" id="dataNas"><br>
-                            <label>Sexo:</label>
-                            <input type="text" name="sexo" placeholder="insira 'F' para feminino e 'M' para masculino"><br>
-                            <label>E-Mail:</label>
-                            <input type="text" name="email"><br>
-                            <input type="hidden" name="id">
-                            <button type="submit">Editar</button>
-                        </form>
-                    </div>
-                </div>
-                <hr>
-                <div><br></div>
-                <div><br></div>
-            </div>
+    <div class="modal" id="modal-editar" onclick="hideModal('#modal-editar', event)">
+        <div class="modal-body">
+            <h1>Editar Inscrição</h1>
+            <form onsubmit="edit(event)">
+                <label>Nome Completo:</label>
+                <input type="text" name="nome">
+                <label>Cpf:</label>
+                <input type="text" name="cpf">
+                <label>Data de Nascimento:</label>
+                <input type="date" name="dataNas">
+                <label>Sexo:</label>
+                <input type="text" name="sexo">
+                <label>Email:</label>
+                <input type="text" name="email">
+                <input type="hidden" name="id">
+                <button type="submit">Editar</button>
+            </form>
         </div>
     </div>
 
+    <footer>
+        <div>
 
-    <!-- tag para o botão sanduiche funcionar -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap.js"></script>
-
-    <!--Faz a 'animação' do botão de login-->
+        </div>
+        <p>© Copyrigh 2022 ContemplArte | Todos direitos Reservados</p>
+        <p>Fabrícia Assis</p>
+    </footer>
     <script src="assets/js/main.js"></script>
 </body>
 

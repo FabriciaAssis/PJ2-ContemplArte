@@ -3,11 +3,11 @@
     require ('database.php');
 
     try {
-        $stmt = $conn->prepare("SELECT id, titulo, genero, capa FROM producoes;");
+        $stmt = $conn->prepare("SELECT nome, cpf, dataNas, sexo, email FROM incGeral;");
         $stmt->execute();
 
         $producoes = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        $result["success"]["message"] = "Cadastrado com sucesso!";
+        $result["success"]["message"] = "Inscrição realizada com sucesso!";
         $result["data"] = $producoes;
 
         header('Content-ype: text/json');

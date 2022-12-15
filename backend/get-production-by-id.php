@@ -7,7 +7,7 @@
             $id = $_GET['id'];
         }
 
-        $stmt = $conn->prepare("SELECT * FROM producoes WHERE id = :id");
+        $stmt = $conn->prepare("SELECT * FROM incGeral WHERE id = :id");
         $stmt->bindParam(':id', $id);
         $stmt->execute();
 
