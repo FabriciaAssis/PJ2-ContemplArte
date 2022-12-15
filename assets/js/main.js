@@ -73,6 +73,7 @@ async function deleteProduction(id){
         alert('Sua inscrição foi deletada com sucesso!')
         loadProductions()
     }
+
 }
 
 async function loadProductionData(id){
@@ -86,7 +87,7 @@ async function loadProductionData(id){
         cpf.value = result.data.cpf
         const dataNas = document.querySelector('#modal-editar input[name=dataNas]')
         dataNas.value = result.data.dataNas
-        const sexo = document.querySelector('#modal-editar input[name=classification]')
+        const sexo = document.querySelector('#modal-editar input[name=sexo]')
         sexo.value = result.data.sexo
         const email = document.querySelector('#modal-editar input[name=email]')
         email.value = result.data.email
