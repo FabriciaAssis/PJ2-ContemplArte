@@ -3,20 +3,19 @@
     require ('database.php');
 
     $id = $_POST["id"];
-    $nome = $_POST["nome"];
-    $cpf = $_POST["cpf"];
-    $dataNas = $_POST["dataNas"];
-    $sexo = $_POST["sexo"];
-    $email = $_POST["email"];
+    $titulo = $_POST["titulo"];
+    $genero = $_POST["genero"];
+    $capa = $_POST["capa"];
+    $classificacao = $_POST["classificacao"];
 
     try {
-        $stmt = $conn->prepare("UPDATE INTO incGeral SET nome = :nome, cpf = :cpf, dataNas = :dataNas, sexo = :sexo WHERE id = :id");
-
-        $stmt->bindParam(':nome', $nome);
-        $stmt->bindParam(':cpf', $cpf);
-        $stmt->bindParam(':dataNas',  $dataNas);
-        $stmt->bindParam(':sexo', $sexo);
-        $stmt->bindParam(':email', $email);
+        $stmt = $conn->prepare("UPDATE INTO producoes SET titulo = :titulo, genero = :genero, capa = :capa, classificacao = :classificacao WHERE id = :id");
+        
+        $stmt->bindParam(':id', $id);
+        $stmt->bindParam(':titulo', $titulo);
+        $stmt->bindParam(':genero', $genero);
+        $stmt->bindParam(':capa', $capa);
+        $stmt->bindParam(':classificacao', $classificacao);
 
         $stmt->execute();
 
@@ -26,11 +25,10 @@
             $result["success"]["message"] = "Cadastrado com sucesso!";
 
             $result["data"]["id"] = $id;
-            $result["data"]["nome"] = $nome;
-            $result["data"]["cpf"] = $cpf;
-            $result["data"]["dataNas"] = $dataNas;
-            $result["data"]["sexo"] = $sexo;
-            $result["data"]["email"] = $email;    
+            $result["data"]["titulo"] = $titulo;
+            $result["data"]["genero"] = $genero;
+            $result["data"]["capa"] = $capa;
+            $result["data"]["classificacao"] = $classificacao;
 
             header('Content-ype: text/json');
             echo json_encode($result);

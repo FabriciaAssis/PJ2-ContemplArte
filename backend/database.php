@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database = "contemplarte";
+$database = "traca_books";
 
 try {
   $conn = new PDO("mysql:host=$servername; dbname=$database", $username, $password);

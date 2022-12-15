@@ -1,169 +1,214 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>ContemplArte-index</title>
+    <title>Traça Books | sebo literario</title>
+
 </head>
 
-<body>
-    <div class="firstConteiner">
-        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+<body onload="loadProductions()">
+    <header>
+        <div class="container main-header">
+            <a href="/tracaBooks/">
+                <div id="logo">
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 463 463"
+                        style="enable-background:new 0 0 463 463;" xml:space="preserve">
+                        <g>
+                            <path
+                                d="M270.615,229.128l-24-72c-1.021-3.063-3.887-5.128-7.115-5.128s-6.094,2.066-7.115,5.128l-24,72
+                       c-0.513,1.54-0.513,3.204,0,4.743l24,72c1.021,3.063,3.887,5.128,7.115,5.128s6.094-2.066,7.115-5.128l24-72
+                       C271.128,232.332,271.128,230.668,270.615,229.128z M239.5,279.783L223.406,231.5l16.094-48.283l16.094,48.283L239.5,279.783z" />
+                            <path
+                                d="M375.5,48h-64c-2.997,0-5.862,0.57-8.5,1.597V23.5C303,10.542,292.458,0,279.5,0h-80C186.542,0,176,10.542,176,23.5v42.097
+                       C173.362,64.57,170.497,64,167.5,64h-80C74.542,64,64,74.542,64,87.5v352c0,12.958,10.542,23.5,23.5,23.5h80
+                       c6.177,0,11.801-2.399,16-6.31c4.199,3.911,9.823,6.31,16,6.31h80c6.177,0,11.801-2.399,16-6.31c4.199,3.911,9.823,6.31,16,6.31h64
+                       c12.958,0,23.5-10.542,23.5-23.5v-368C399,58.542,388.458,48,375.5,48z M79,135h97v257H79V135z M191,87.5V87h97v289h-97V87.5z
+                        M288,71.5V72h-97V55h97V71.5z M191,391h97v17h-97V391z M303,119h81v273h-81V119z M311.5,63h64c4.687,0,8.5,3.813,8.5,8.5V104h-81
+                       V71.5C303,66.813,306.813,63,311.5,63z M199.5,15h80c4.687,0,8.5,3.813,8.5,8.5V40h-97V23.5C191,18.813,194.813,15,199.5,15z
+                        M87.5,79h80c4.687,0,8.5,3.813,8.5,8.5V120H79V87.5C79,82.813,82.813,79,87.5,79z M167.5,448h-80c-4.687,0-8.5-3.813-8.5-8.5V407
+                       h97v32.5C176,444.187,172.187,448,167.5,448z M279.5,448h-80c-4.687,0-8.5-3.813-8.5-8.5V423h97v16.5
+                       C288,444.187,284.187,448,279.5,448z M375.5,448h-64c-4.687,0-8.5-3.813-8.5-8.5V407h81v32.5C384,444.187,380.187,448,375.5,448z" />
+                            <path
+                                d="M374.615,253.128l-24-72c-1.021-3.063-3.887-5.128-7.115-5.128s-6.094,2.066-7.115,5.128l-24,72
+                       c-0.513,1.54-0.513,3.204,0,4.743l24,72c1.021,3.063,3.887,5.128,7.115,5.128s6.094-2.066,7.115-5.128l24-72
+                       C375.128,256.332,375.128,254.668,374.615,253.128z M343.5,303.783L327.406,255.5l16.094-48.283l16.094,48.283L343.5,303.783z" />
+                            <path
+                                d="M158.615,261.128l-24-72c-1.021-3.063-3.887-5.128-7.115-5.128s-6.094,2.066-7.115,5.128l-24,72
+                       c-0.513,1.54-0.513,3.204,0,4.743l24,72c1.021,3.063,3.887,5.128,7.115,5.128s6.094-2.066,7.115-5.128l24-72
+                       C159.128,264.332,159.128,262.668,158.615,261.128z M127.5,311.783L111.406,263.5l16.094-48.283l16.094,48.283L127.5,311.783z" />
+                        </g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                    </svg>
 
-            <!-- elemento destaque q funciona como se fosse um logo q manda para pag inicial -->
-            <a href="index.html" class="navbar-brand">ContemplArte</a>
-
-            <!-- criou o batão para quando a tela for pequena -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsite">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- itens do navbar -->
-            <div class="navbar-collapse collapse" id="navbarsite">
-                <!-- <ul class="navbar-nav">
-                    <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Perfil</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Serviços</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Testemunhos</a></li>
-                </ul> -->
-
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
-
-                        <a href="#" class="nav-link dropdown-toglle" data-toggle="dropdown" id="navDrop">
-                            Contatos
-                        </a>
-                        <div class="dropdown-menu w-25">
-                            <a href="https://wa.me/5512997692612" class="dropdown-item">WhatsApp</a>
-                            <a href="https://www.instagram.com/con.templ_arte/" class="dropdown-item">Instagram</a>
-                        </div>
-                    </li>
-                    <button id="bntCad">
-                        <a class="userImg" href="inscricoes.html" class="nav-link dropdown-toglle">
-                            <img src="assets/img/user-svgrepo-com.svg" alt="" style="height: 25px;">
-                        </a>
-                    </button>
+                    <h1><span>Traça</span>Books</h1>
+                </div>
+            </a>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="/tracaBooks/" class="active">Livros</a></li>
+                    <li><a href="comentarios.html">Comentários</a></li>
                 </ul>
-
-            </div>
-        </nav> <!-- nav class="navbar"> -->
-
-        <!-- Carousel -->
-        <div class="carrousel slide" id="carouselhome" data-ride="carousel">
-            <!-- div q vai sustentar as imgs do carousel -->
-            <div class="carousel-inner">
-
-                <div class="carousel-item active">
-                    <img src="assets/img/ContemplArte.carousel.png" class="img-fluid d-block">
-                    <div class="carousel-caption"></div>
-                </div> <!-- item 1 do carousel -->
-            </div> <!-- div class="carousel-inner"-->
-        </div> <!-- Carousel -->
-    </div>
-
-    <div class="container">
-
-        <!-- Primeira linha contem umtexto de boas vindas -->
-        <div class="row">
-            <div class="col-12 text-center my-5">
-                <h1>Bem vindo ao encontro de novas experiências!</h1>
-                <p><i>"A arte existe para que a vida não nos destruia"</i></p>
-            </div>
+            </nav>
         </div>
-    </div>
+    </header>
+    <br><br>
+    <main>
+        <section class="container">
+            <h1 class="section-title">Pedido de livros</h1>
+            <header id="content-header" class="container flex-sb">
+                <div class="bradcrump"></div>
+                <button onclick="showModal('#modal-cadastrar')">Fazer Pedido</button>
+            </header>
+            <article id="productions">
+                <div class="card-book">
+                </div>
 
-    <div class="wrapper">
-        <div class="content-wrapper event-info w-row">
-            <div class="row">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
-                            <div class="text-block">Iscrições abertas</div>
-                            <h1 class="event-name">CONTMPLARTE WORKSHOP DE DANÇA</h1>
-                            <img src="assets/img/location-svgrepo-com.svg" alt="" id="imgLocation">
-                            <a href="https://www.google.com/maps?q=caraguatatuba+centro+esportivo&uact=5&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIGCAAQCBAeMgYIABAIEB4yBggAEAgQHjIGCAAQCBAeMgYIABAIEB4yBggAEAgQHjICCCY6CggAEEcQ1gQQsAM6DQgAEEcQ1gQQsAMQyQNKBAhBGABKBAhGGABQqQlYqQlgxwxoAnABeACAAYIBiAGCAZIBAzAuMZgBAKABAcgBCMABAQ&um=1&ie=UTF-8&sa=X&ved=2ahUKEwiNr8fYqIb7AhUuRLgEHcJMAEkQ_AUoAnoECAIQBA"
-                                target="_blank" class="">
-                                <div white-space="nowrap" class="event-info-city">
-                                    CEMUG - caraguatatuba, SP </div>
-                            </a>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="">
-                                        <img src="assets/img/calendar-svgrepo-com.svg" alt="" id="imgCalendar">
-                                        <div white-space="nowrap" class="event-info-calendar">
-                                            27 de dezembro de 2022, 09h </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="card-book">
+                </div>
+                <div class="card-book">
+                </div>
+
+            </article>
+        </section>
+        <br><br>
+        <section class="container">
+            <h1 class="section-title">Livros Disponiveis</h1>
+            <article id="productions">
+                <div class="card-book">
+                    <a href="livro">
+                        <img src="assets/img/lore_book.jpg" alt="">
+                    </a>
+                    <div>
+                        <a href="livro">
+                            <h2>Lore Olympus: Volume I</h2>
+                        </a>
+                    </div>
+                    <div>
+                        <p>Webcomic de Romance</p>
                     </div>
                 </div>
-            </div>
+
+                <div class="card-book">
+                    <a href="livro">
+                        <img src="assets/img/todas_suas_imperfeicoes.jpg" alt="">
+                    </a>
+                    <div>
+                        <a href="livro">
+                            <h2>Todas as suas (im)perfeições</h2>
+                        </a>
+                    </div>
+                    <div>
+                        <p>Drama</p>
+                    </div>
+                </div>
+                <div class="card-book">
+                    <a href="livro">
+                        <img src="assets/img/Jogador_Número_1.jpg" alt="">
+                    </a>
+                    <div>
+                        <a href="livro">
+                            <h2>Jogador Número 1</h2>
+                        </a>
+                    </div>
+                    <div>
+                        <p>Ficção científica/distópica, Literatura fantástica</p>
+                    </div>
+                </div>
+
+                <div class="card-book">
+                    <a href="livro">
+                        <img src="assets/img/Dracula.jpg" alt="">
+                    </a>
+                    <div>
+                        <a href="livro">
+                            <h2>Drácula</h2>
+                        </a>
+                    </div>
+                    <div>
+                        <p>Terror</p>
+                    </div>
+                </div>
+
+                <div class="card-book">
+                    <a href="livro">
+                        <img src="assets/img/Orgulho_e_preconceito.jpg" alt="">
+                    </a>
+                    <div>
+                        <a href="livro">
+                            <h2>Orgulho e Preconceito </h2>
+                        </a>
+                    </div>
+                    <div>
+                        <p>Ficção, Romance</p>
+                    </div>
+                </div>
+                <div>
+                    <button style="margin: 235px 0px 0px 91px;">Ver Mais</button>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <div class="modal" id="modal-cadastrar" onclick="hideModal('#modal-cadastrar', event)">
+        <div class="modal-body">
+            <h1>Adicionar Produção</h1>
+            <form onsubmit="insert(event)">
+                <label>Título:</label>
+                <input type="text" name="titulo">
+                <label>genero:</label>
+                <input type="text" name="genero">
+                <label>Capa:</label>
+                <input type="text" name="capa">
+                <label>Classificação:</label>
+                <input type="text" name="classificacao">
+                <button type="submit">Cadastrar</button>
+            </form>
         </div>
     </div>
-
-    <div class="event-content-section">
-        <div class="container padding-top-40" id="descricao">
-            <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12" id="event-txt">
-                <h3 class="heading" id="description">Descrição do evento</h3>
-                <!--Escrever esssa parte aqui-->
-                <div>
-                    <div>Nos dias de hoje, a interação interpessoal está cada vez mais escassa e vem ficando cada vez
-                        mais falha principalmente após essa pandemia, e consequentemente a procura pela arte por meio de
-                        dança também ficou reduzida .</div>
-                    <div>E foi exatamente pensando em propagar a arte de dançar como modo de expressão livre que no dia <span class="dataSpan">27 de dezembro</span> será realizado o nosso 1ºWorkshop de Dança,
-                        voltado para sentir da musica e das suas vibrações, realizado com o apoio especial da
-                        Instituição Casa das Artes.</div>
-                    <div>Neste evento teremos três modalidades de dança, e são elas: ballet, dança de rua e tango, com os melhores professores da região!</div>
-                    <div>Como evento especial, teremos, nada mais nada menos que uma batalha de hip-hop, após as aulas.</div>
-                    <div>E por ultimo mas não menos importante, ocorrerá um baile de despididas para que todos os inscritos se conheçam e criem laçõs entre si.</div>
-                    <hr>
-
-                    <div class="progrm">Programação</div>
-                    <div><span class="progrmSpan">27 de dezembro (terça-feira)</span> - Abertura e Recepção</div>
-                    <div>09h - Apresentação do evento e de professores</div>
-                    <div>9:30 - Credenciamento dos inscritos</div>
-                    <div>10h - Aula de ballet</div>
-                    <div><b>14:30 - Intervalo para almoço</b></div>
-                    <div>15h - Aula de dança de rua</div>
-                    <div>19:30 - Palestra "Desafios da Carreira Artistica"</div>
-                    <div><b>21h - Intervalo para janta</b></div>
-                    <br>
-                    <div><span class="progrmSpan">28 de  dezembro (quarta-feira)</span> - Reta final</div>
-                    <div>09h - Café da manhã<br></div>
-                    <div>10h - Aula de tango<br></div>
-                    <div><b>14:30 - Intervalo para almoço</b><br></div>
-                    <div>15h - Batalha de dança</div>
-                    <div>19h - Preparatórios para o baile</span><br></div>
-                    <div><b>19:30 - Baile</b></div>
-                    <div>00:00 - Resultado da batalha</div>
-                </div><br>
-                <div>Vem dançar com a gente, contamos com a sua presença!</div>
-                <hr>
-                <div><b>
-                    <a href="inscricoes.html" style="text-decoration: underline;">FAÇA SUA INCRIÇÃO</a>
-                    </b></div>
-                <div><br></div>
-                <div><br></div>
-                <div><br></div>
-            </div>
+    <div class="modal" id="modal-editar" onclick="hideModal('#modal-editar', event)">
+        <div class="modal-body">
+            <h1>Editar Produção</h1>
+            <form onsubmit="edit(event)">
+                <label>Título:</label>
+                <input type="text" name="titulo">
+                <label>genero:</label>
+                <input type="text" name="genero">
+                <label>Capa:</label>
+                <input type="text" name="capa">
+                <label>Classificação:</label>
+                <input type="text" name="classificacao">
+                <input type="hidden" name="id">
+                <button type="submit">Editar</button>
+            </form>
         </div>
     </div>
 
     <footer>
-        <!--Aql coisinha q fica lá em baixo do site-->
-        <p>© Copyrigh 2022 Contemplarte | Todos direitos Reservados</p>
+        <div>
+            
+        </div>
+        <p>© Copyrigh 2022 BestFlix | Todos direitos Reservados</p>
+        <p>Fabrícia Assis</p>
     </footer>
-
-    <!-- tag para o botão sanduiche funcionar -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap.js"></script>
-
-    <!--Faz a 'animação' do botão de login-->
     <script src="assets/js/main.js"></script>
 </body>
 

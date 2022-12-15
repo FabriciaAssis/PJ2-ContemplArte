@@ -22,14 +22,14 @@ function closeAllModal(){
 async function insert(event){
     event.preventDefault() //para não recarregar a pag
     const formData = new FormData(event.target) 
-    const response = await fetch('backend/insert.php', {
-        method: 'POST', 
+    const response = await fetch('backend/insert.php', { //fetch: oq faz o js desparar para o backend sem recarregar a pag
+        method: 'POST', //await: a resposta do fetch não é automatica por isso o await
         body: formData
     })
     const result = await response.json()
     if(result?.success){
         closeAllModal()
-        alert('Sua inscrição '+result.data.nome+' foi realizada com sucesso!')
+        alert('Seu livro '+result.data.titulo+' foi cadastrado com sucesso!')
         loadProductions()
     }
 }
@@ -40,22 +40,21 @@ async function loadProductions() {
     if(result?.success){
         const listProductions = document.querySelector('#productions')
         listProductions.innerHTML = ''
-        const insc = result.data
-        insc.map((insc) => { //map é um laço de repeição
+        const livros = result.data
+        livros.map((book) => { //map é um laço de repeição
             listProductions.innerHTML += `
-                <div class="card-insc">
-                    <a href="insc">
-                    <h4>${insc.nome}</h4>
+                <div class="card-book">
+                    <a href="livro">
+                        <img src="${book.capa}" alt="${book.titulo}">
                     </a>
                     <div>
                         <a href="livro">
-                            <h5>${insc.cpf}</h5>
+                            <h2>${book.titulo}</h2>
                         </a>
                         <div>
-                            <p>${insc.dataNas}</p>
-                            <p>${insc.email}</p>
-                            <img src="assets/img/trash-svgrepo-com.svg" alt="Apagar" onclick="deleteProduction(${insc.id})"/>
-                            <img src="assets/img/edit-svgrepo-com.svg" alt="Editar" onclick="loadProductionData(${insc.id})"/>
+                            <p>${book.genero}</p>
+                            <img src="assets/img/trash-svgrepo-com.svg" alt="Apagar" onclick="deleteProduction(${book.id})"/>
+                            <img src="assets/img/edit-svgrepo-com.svg" alt="Editar" onclick="loadProductionData(${book.id})"/>
                         </div>
                     </div>
                 </div>
@@ -70,7 +69,7 @@ async function deleteProduction(id){
     const response = await fetch('backend/delete.php?id='+id)
     const result = await response.json()
     if(result?.success){
-        alert('Sua inscrição foi deletada com sucesso!')
+        alert('Seu livro foi deletado com sucesso!')
         loadProductions()
     }
 
@@ -81,16 +80,14 @@ async function loadProductionData(id){
     const result = await response.json()
     if(result?.success){
         showModal('#modal-editar')
-        const nome = document.querySelector('#modal-editar input[name=fullName]')
-        nome.value = result.data.nome
-        const cpf = document.querySelector('#modal-editar input[name=cpf]')
-        cpf.value = result.data.cpf
-        const dataNas = document.querySelector('#modal-editar input[name=dataNas]')
-        dataNas.value = result.data.dataNas
-        const sexo = document.querySelector('#modal-editar input[name=classification]')
-        sexo.value = result.data.sexo
-        const email = document.querySelector('#modal-editar input[name=email]')
-        email.value = result.data.email
+        const title = document.querySelector('#modal-editar input[name=title]')
+        title.value = result.data.titulo
+        const category = document.querySelector('#modal-editar input[name=category]')
+        category.value = result.data.genero
+        const cover = document.querySelector('#modal-editar input[name=cover]')
+        cover.value = result.data.capa
+        const classification = document.querySelector('#modal-editar input[name=classification]')
+        classification.value = result.data.classificacao
         const id = document.querySelector('#modal-editar input[name=id]')
         id.value = result.data.id
     }
@@ -106,22 +103,131 @@ async function edit(event){
     const result = await response.json()
     if(result?.success){
         closeAllModal()
-        alert('Sua inscrição '+result.data.titulo+' foi editada com sucesso!')
+        alert('Seu livro '+result.data.titulo+' foi editado com sucesso!')
         loadProductions()
     }
 }
 
 function clearForm(idModal) {
-    const nome = document.querySelector(`${idModal} input[name=fullName]`)
-    nome.value = ''
-    const cpf = document.querySelector(`${idModal} input[name=cpf]`)
-    cpf.value = 'result.data.genero'
-    const dataNas = document.querySelector(`${idModal} input[name=dataNas]`)
-    dataNas.value = ''
-    const sexo = document.querySelector(`${idModal} input[name=sexo]`)
-    sexo.value = ''
-    const email = document.querySelector(`${idModal} input[name=email]`)
-    email.value = ''
+    const title = document.querySelector(`${idModal} input[name=title]`)
+    title.value = ''
+    const category = document.querySelector(`${idModal} input[name=category]`)
+    category.value = 'result.data.genero'
+    const cover = document.querySelector(`${idModal} input[name=cover]`)
+    cover.value = ''
+    const classification = document.querySelector(`${idModal} input[name=classification]`)
+    classification.value = ''
     const id = document.querySelector(`${idModal} input[name=id]`)
     id.value = ''
+}
+
+// pag comentários
+
+function showModalNote(idModal){
+    const modal = document.querySelector(idModal)
+    modal.style.display = 'flex'
+}
+
+function hideModalNote(idModal, event){
+    if(event.target.className === 'modal'){
+            const modal = document.querySelector(idModal)
+            modal.style.display = 'none'
+
+    }
+}
+
+
+function closeNoteAllModal(){
+    const modais = document.querySelectorAll('.modal-note')
+    modais.forEach(modal => {
+        modal.style.display = 'none'
+
+    })
+}
+
+async function insertNote(event){
+    event.preventDefault()
+    const formData = new FormData(event.target) 
+    const response = await fetch('backend/insertNote.php', {
+        method: 'POST',
+        body: formData
+    })
+    const result = await response.json()
+    if(result?.success){
+        closeNoteAllModal()
+        alert('Seu comentário '+result.data.nome+' foi postado com sucesso!')
+        loadNote()
+    }
+}
+
+async function loadNote() {
+    const response = await fetch('backend/listNote.php')
+    const result = await response.json()
+    if(result?.success){
+        const listNotes = document.querySelector('#notes')
+        listNotes.innerHTML = ''
+        const livros = result.data
+        livros.map((book) => { 
+            listNotes.innerHTML += `
+                <div class="card-note">
+                    <div>
+                        <a href="comentario">
+                            <h2>${note.nome}</h2>
+                        </a>
+                        <div>
+                            <p>${note.comentario}</p>
+                            <img src="assets/img/trash-svgrepo-com.svg" alt="Apagar" onclick="deleteProduction(${note.id})"/>
+                            <img src="assets/img/edit-svgrepo-com.svg" alt="Editar" onclick="loadProductionData(${note.id})"/>
+                        </div>
+                    </div>
+                </div>
+        `
+        })
+    }else{
+        alert('Erro ao carregar comentário')
+    }
+}
+
+async function deleteNote(id){
+    const response = await fetch('backend/deleteNote.php?id='+id)
+    const result = await response.json()
+    if(result?.success){
+        alert('Seu comentário foi deletado com sucesso!')
+        loadNote()
+    }
+
+}
+
+async function loadNoteData(id){
+    const response = await fetch('backend/get-notes-by-id.php?id='+id)
+    const result = await response.json()
+    if(result?.success){
+        showModal('#modal-note-editar')
+        const nome = document.querySelector('#modal-note-editar input[name=nome]')
+        nome.value = result.data.nome
+        const comentario = document.querySelector('#modal-note-editar input[name=comentario]')
+        comentario.value = result.data.comentario
+    }
+
+}
+async function editNote(event){
+    event.preventDefault()
+    const formData = new FormData(event.target) 
+    const response = await fetch('backend/editNote.php', { 
+        method: 'POST',
+        body: formData
+    })
+    const result = await response.json()
+    if(result?.success){
+        closeNoteAllModal()
+        alert('O comentário de '+result.data.nome+' foi editado com sucesso!')
+        loadNote()
+    }
+}
+
+function clearFormNote(idModal) {
+    const nome = document.querySelector(`${idModal} input[name=nome]`)
+    nome.value = ''
+    const comentario = document.querySelector('#modal-note-editar input[name=comentario]')
+    comentario.value = ''
 }

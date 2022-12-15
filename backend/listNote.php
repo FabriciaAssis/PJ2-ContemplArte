@@ -3,7 +3,7 @@
     require ('database.php');
 
     try {
-        $stmt = $conn->prepare("SELECT id, titulo, genero, capa FROM producoes;");
+        $stmt = $conn->prepare("SELECT id, nome, comentario FROM comentarios;");
         $stmt->execute();
 
         $producoes = $stmt->fetchAll(PDO::FETCH_ASSOC);
